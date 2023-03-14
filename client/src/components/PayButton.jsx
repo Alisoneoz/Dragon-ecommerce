@@ -8,7 +8,7 @@ import {auth} from "../config/FirebaseConfiguration";
 
 const PayButton = ({ cartItems }) => {
   //const user = useSelector((state)=>state.auth.value);
-  const url = "http://localhost:5000/api";
+  const url = "https://dragon-ecommerce-backend.onrender.com";
   const user = auth.currentUser;
   console.log(url)
   const handleCheckOut = () =>{
