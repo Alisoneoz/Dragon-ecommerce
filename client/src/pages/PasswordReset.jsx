@@ -98,7 +98,7 @@ const PasswordReset = () => {
             <div className="flex">Don't have an account? </div>
             <NavLink
               to="/register"
-              className="ml-2 font-bold hover:text-xl px-2 py-1 border rounded-md border-2 border-primary-100"
+              className="ml-2 font-bold hover:text-xl px-2 py-1 rounded-md border-2 border-primary-100"
             >
               Sign Up
             </NavLink>
