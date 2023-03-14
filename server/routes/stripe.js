@@ -47,8 +47,8 @@ router.post("/create-checkout-session", async (req, res) => {
       enabled:true,
     },
     mode: "payment",
-    success_url: "http://localhost:5173/",
-    cancel_url: "http://localhost:5173/cart",
+    success_url: "https://dragon-ecommerce-store.netlify.app/",
+    cancel_url: "https://dragon-ecommerce-store.netlify.app/cart",
   });
 
   res.send({ url: session.url });
