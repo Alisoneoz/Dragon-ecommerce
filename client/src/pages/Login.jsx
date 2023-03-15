@@ -62,11 +62,11 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center  bg-storeImage bg-cover bg-center opacity-85">
+    <div className="min-h-screen flex justify-center  bg-[url('../assets/ble.svg')]  bg-cover bg-center opacity-85" id="access">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="p-9 rounded-lg shadow-xl ml-7 mr-9 w-full sm:w-4/6 lg:w-1/3 h-fit  bg-secondary-100/80 dark:bg-secondary-900/80 
-        mt-20 sm:mt-28 lg:mt-28
+        mt-40 sm:mt-28 lg:mt-28
         "
       >
         <div className="">

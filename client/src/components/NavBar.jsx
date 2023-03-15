@@ -137,7 +137,7 @@ const NavBar = () => {
           {user ? (
             <LogOut />
           ) : (
-            <NavLink to="/login" className="px-4 flex items-center">
+            <NavLink to="/login" className=" flex items-center pr-4">
               Login
             </NavLink>
           )}
