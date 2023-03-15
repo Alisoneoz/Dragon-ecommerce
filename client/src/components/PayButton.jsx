@@ -1,15 +1,20 @@
 import { useState } from "react";
 import axios from "axios";
 import { auth } from "../config/FirebaseConfiguration";
+import { useDispatch } from "react-redux";
+import { clearCart } from  "../features/cartSlice"
 import AuthenticationRequiredModal from "./AuthenticationRequiredModal";
+
 
 const PayButton = ({ cartItems }) => {
   const [openModal, setOpenModal] = useState(false);
+  const dispatch = useDispatch();
 
   const url = "https://dragon-ecommerce-backend.onrender.com";
   const user = auth.currentUser;
   console.log(url);
-  const handleCheckOut = () => {
+
+  const handleCheckOut = (cartItem) => {
     if (!user) {
       setOpenModal(true);
       return ;
@@ -21,6 +26,8 @@ const PayButton = ({ cartItems }) => {
           user: user.uid,
         })
         .then((res) => {
+          dispatch(clearCart(cartItem));
+          console.log(`Cart cleared`);
           if (res.data.url) {
             window.location.href = res.data.url;
           }

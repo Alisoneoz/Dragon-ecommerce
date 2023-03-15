@@ -2,7 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 
 const initialState = {
-  cartItems: [],
+  cartItems: localStorage.getItem("cartItems")
+  ? JSON.parse(localStorage.getItem("cartItems"))
+  : [],
   amount:0,
   total:0
 };
@@ -21,7 +23,7 @@ const cartSlice = createSlice({
         state.cartItems.push({ ...action.payload, amount: 1 });
       }
       // Toastify pop up notification
-      toast.success(`➕ New item added to cart: ${action.payload.title} 🛒`, {
+      toast.success(`New item added to cart: ${action.payload.title} 🛒`, {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -31,12 +33,14 @@ const cartSlice = createSlice({
         progress: undefined,
         theme: "colored",
       });
+      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
     incrementQuantity: (state, action) => {
       const item = state.cartItems.find(
         (item) => item.id === action.payload.id
       );
       item.amount++;
+      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
     decrementQuantity: (state, action) => {
       const item = state.cartItems.find(
@@ -50,12 +54,14 @@ const cartSlice = createSlice({
       } else {
         item.amount--;
       }
+      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
     removeItem: (state, action) => {
       const removeTheItem = state.cartItems.filter(
         (item) => item.id !== action.payload.id
       );
       state.cartItems = removeTheItem;
+      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
     calculateTotals: (state) => {
       let amount= 0;
@@ -70,6 +76,7 @@ const cartSlice = createSlice({
   
     clearCart: (state) => {
       state.cartItems = [];
+      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
   },
 });
