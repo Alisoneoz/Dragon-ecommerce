@@ -10,7 +10,7 @@ const PayButton = ({ cartItems }) => {
   const [openModal, setOpenModal] = useState(false);
   const dispatch = useDispatch();
 
-  const url = "https://dragon-ecommerce-backend.onrender.com";
+  const url = "https://dragon-ecommerce-backend.onrender.com/api/stripe";
   const user = auth.currentUser;
   console.log(url);
 
@@ -21,7 +21,7 @@ const PayButton = ({ cartItems }) => {
     } else {
       console.log(user.uid);
       axios
-        .post(`${url}/stripe/create-checkout-session`, {
+        .post(`${url}/create-checkout-session`, {
           cartItems,
           user: user.uid,
         })
