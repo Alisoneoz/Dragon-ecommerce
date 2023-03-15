@@ -19,7 +19,7 @@ function CartItem({
               className="w-40 mx-auto lg:h-20 lg:w-16 r-4 rounded-md object-contain"
             />
           </div>
-          <div>
+          <div className="">
             <p className="font-bold text-sm sm:text-xl  leading-snug">{cartItem.title}</p>
             <p className="my-2">${cartItem.price}</p>
           </div>

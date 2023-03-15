@@ -37,14 +37,17 @@ const PayButton = ({ cartItems }) => {
   };
   
   return (
-<div className="">
-<button
+<div className={openModal ? "h-min-screen w-screen " : ""}>
+
+    {openModal ? (<AuthenticationRequiredModal closeModal={setOpenModal}/>)
+    :(
+      <button
       onClick={handleCheckOut}
-      className={!openModal ?"mt-4 py-3 px-5 rounded-md text-primary-100 bg-primary-900 dark-bg-primary-100 hover:bg-secondary-900 hover:dark:bg-secondary-100 opacity-100 hover:text-black font-bold" : "h-min-screen w-screen "}
+      className="mt-4 py-3 px-5 rounded-md text-primary-100 bg-primary-900 dark:bg-primary-100 hover:bg-secondary-900 hover:dark:bg-secondary-100 opacity-100 hover:text-black font-bold dark:text-black"
     >
       Check Out
     </button>
-    {openModal && (<AuthenticationRequiredModal closeModal={setOpenModal}/>)}
+    )}
 </div>
   );
 };
