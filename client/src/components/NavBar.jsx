@@ -49,8 +49,7 @@ const NavBar = () => {
     <div>
       <div
         className=" items-center py-4 px-4 justify-between bg-secondary-100 dark:bg-primary-900 dark:border-b dark:shadow-xl
-      hidden sm:flex lg:flex
-      "
+      hidden sm:flex lg:flex"
       >
         <div className="w-1/3 flex justify-start">
           <NavLink to="/" className="dark:shadow-xl font-bold pl-2 text-xl">
@@ -86,7 +85,7 @@ const NavBar = () => {
             </span>
           </NavLink>
 
-          <button onClick={handleThemeSwitch} className="text-3xl">
+          <button onClick={handleThemeSwitch} className="text-3xl sm:mr-12">
             {theme === "dark" ? <MdLightMode /> : <MdDarkMode />}
           </button>
         </div>

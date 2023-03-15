@@ -44,7 +44,7 @@ function App() {
   }, [auth, dispatch]);
   
   return (
-    <div className="App min-h-screen m-0 p-0 box-border font-josefin bg-primary-100 dark:bg-primary-900 dark:text-primary-100 ">
+    <div className="App w-screen min-h-screen m-0 p-0 box-border font-josefin bg-primary-100 dark:bg-primary-900 dark:text-primary-100 ">
       <BrowserRouter>
         <ToastContainer />
         <NavBar />  
