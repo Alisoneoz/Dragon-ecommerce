@@ -22,6 +22,20 @@
 
 * Responsive Design
 
+## Technologies
+
+*  Frontend:
+  - ReactJS v18.2.0
+  - Reduxjs Toolkit v1.9.2
+  - Axios v1.3.4
+  - Firebase v9.17.2
+  - React-router-dom v6.8.1 (Using v6.3 syntax)
+
+*  Backend
+  - NodeJS v18.7.0
+  - Express v4.18.2
+  - Stripe v11.14.0
+    
 
 ## License
 
