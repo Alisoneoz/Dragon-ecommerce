@@ -6,6 +6,23 @@
 
 [Dragon E-commerce Store](https://dragon-ecommerce-store.netlify.app/)
 
+## Key Features
+
+* User Authentication with Firebase.
+
+* Shopping Cart
+  - Add Products to Cart.
+  - Increase and decrease products from cart.
+  - Remove products from cart.
+  - Clean Cart.
+
+* Checkout order with Stripe Checkout Payments
+
+* Dark/Light Mode
+
+* Responsive Design
+
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
