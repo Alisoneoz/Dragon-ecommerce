@@ -31,10 +31,10 @@
   - Firebase v9.17.2 
   - React-router-dom v6.8.1 (Using v6.3 syntax)
 
- * Backend
+* Backend
   - NodeJS v18.7.0 
   - Express v4.18.2 
-  - Stripe v11.14.0  
+  - Stripe v11.14.0 
 
 ## License
 
